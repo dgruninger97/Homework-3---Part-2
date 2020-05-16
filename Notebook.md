@@ -4,4 +4,8 @@
 
 ## Final Class Diagram
 
+![FinalClassDiagram](images/FinalClassDiagram.PNG)
+
 ## Final Sequence Diagram
+
+![FinalSequenceDiagram](images/FinalSequenceDiagram.PNG)
