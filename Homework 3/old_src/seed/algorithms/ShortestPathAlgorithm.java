@@ -5,8 +5,6 @@ public abstract class ShortestPathAlgorithm {
 	String name;
 	int timeComplexity;
 	
+	abstract long findShortestPath(Graph g);
 	
-	public ShortestPath findShortestPath() {
-		
-	}
 }

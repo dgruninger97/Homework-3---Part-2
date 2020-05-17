@@ -8,7 +8,7 @@ import java.util.Set;
 
 import seed.Constants;
 
-public class DFSArrayAlgorithm implements ArrayAlgorithm {
+public class DFSArrayAlgorithm extends ShortestPathAlgorithm implements ArrayAlgorithm {
 	int nAlgorithmSteps = 0;
 	
 	@Override
@@ -64,5 +64,13 @@ public class DFSArrayAlgorithm implements ArrayAlgorithm {
 	@Override
 	public String getName() {
 		return "DFS Array";
+	}
+
+	@Override
+	long findShortestPath(Graph g) {
+		long startTime = System.nanoTime();
+		run(g.buildWikipediaArrayGraph());
+		long endTime = System.nanoTime();
+		return endTime - startTime;
 	}
 }

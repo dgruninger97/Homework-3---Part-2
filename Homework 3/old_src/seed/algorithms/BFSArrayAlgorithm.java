@@ -6,7 +6,7 @@ import java.util.Queue;
 
 import seed.Constants;
 
-public class BFSArrayAlgorithm implements ArrayAlgorithm {
+public class BFSArrayAlgorithm extends ShortestPathAlgorithm implements ArrayAlgorithm {
 
 	int nAlgorithmSteps = 0;
 	
@@ -54,6 +54,14 @@ public class BFSArrayAlgorithm implements ArrayAlgorithm {
 	
 	public String getName() {
 		return "BFS Array";
+	}
+
+	@Override
+	long findShortestPath(Graph g) {
+		long startTime = System.nanoTime();
+		run(g.buildWikipediaArrayGraph());
+		long endTime = System.nanoTime();
+		return endTime - startTime;
 	}
 
 }

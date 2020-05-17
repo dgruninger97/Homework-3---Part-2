@@ -3,7 +3,7 @@ package seed.algorithms;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class DFSListAlgorithm implements ListAlgorithm {
+public class DFSListAlgorithm extends ShortestPathAlgorithm implements ListAlgorithm {
 
 	int nAlgorithmSteps = 0;
 	
@@ -48,6 +48,14 @@ public class DFSListAlgorithm implements ListAlgorithm {
 	@Override
 	public String getName() {
 		return "DFS List";
+	}
+
+	@Override
+	long findShortestPath(Graph g) {
+		long startTime = System.nanoTime();
+		run(g.buildWikipediaListGraph()); // wont function here
+		long endTime = System.nanoTime();
+		return endTime - startTime;
 	}
 
 }

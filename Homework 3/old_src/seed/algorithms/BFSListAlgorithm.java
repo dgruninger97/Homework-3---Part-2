@@ -3,7 +3,7 @@ package seed.algorithms;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BFSListAlgorithm implements ListAlgorithm {
+public class BFSListAlgorithm extends ShortestPathAlgorithm implements ListAlgorithm {
 
 	int nAlgorithmSteps = 0;
 
@@ -42,6 +42,14 @@ public class BFSListAlgorithm implements ListAlgorithm {
 	@Override
 	public String getName() {
 		return "BFS List";
+	}
+
+	@Override
+	long findShortestPath(Graph g) {
+		long startTime = System.nanoTime();
+		run(g.buildWikipediaListGraph()); // wont function here
+		long endTime = System.nanoTime();
+		return endTime - startTime;
 	}
 
 }
