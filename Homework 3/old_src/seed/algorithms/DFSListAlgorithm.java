@@ -47,15 +47,17 @@ public class DFSListAlgorithm extends ShortestPathAlgorithm implements ListAlgor
 
 	@Override
 	public String getName() {
-		return "DFS List";
+		this.name = "DFS List";
+		return this.name;
 	}
 
 	@Override
 	long findShortestPath(Graph g) {
 		long startTime = System.nanoTime();
-		run(g.buildWikipediaListGraph()); // wont function here
+		run(g.buildWikipediaListGraph()); //wont function here
 		long endTime = System.nanoTime();
-		return endTime - startTime;
+		timeComplexity = endTime - startTime;
+		return timeComplexity;
 	}
 
 }

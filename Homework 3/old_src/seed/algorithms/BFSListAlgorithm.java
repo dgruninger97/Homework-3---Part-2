@@ -41,15 +41,17 @@ public class BFSListAlgorithm extends ShortestPathAlgorithm implements ListAlgor
 
 	@Override
 	public String getName() {
-		return "BFS List";
+		this.name = "BFS List";
+		return name;
 	}
 
 	@Override
 	long findShortestPath(Graph g) {
 		long startTime = System.nanoTime();
-		run(g.buildWikipediaListGraph()); // wont function here
+		run(g.buildWikipediaListGraph()); //wont function here
 		long endTime = System.nanoTime();
-		return endTime - startTime;
+		timeComplexity = endTime - startTime;
+		return timeComplexity;
 	}
 
 }

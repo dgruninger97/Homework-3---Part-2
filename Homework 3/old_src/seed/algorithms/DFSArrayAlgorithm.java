@@ -63,7 +63,8 @@ public class DFSArrayAlgorithm extends ShortestPathAlgorithm implements ArrayAlg
 
 	@Override
 	public String getName() {
-		return "DFS Array";
+		this.name = "DFS Array";
+		return name;
 	}
 
 	@Override
@@ -71,6 +72,7 @@ public class DFSArrayAlgorithm extends ShortestPathAlgorithm implements ArrayAlg
 		long startTime = System.nanoTime();
 		run(g.buildWikipediaArrayGraph());
 		long endTime = System.nanoTime();
-		return endTime - startTime;
+		timeComplexity = endTime - startTime;
+		return timeComplexity;
 	}
 }

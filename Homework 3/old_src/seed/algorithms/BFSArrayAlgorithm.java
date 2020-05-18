@@ -53,7 +53,8 @@ public class BFSArrayAlgorithm extends ShortestPathAlgorithm implements ArrayAlg
 	}
 	
 	public String getName() {
-		return "BFS Array";
+		this.name = "BFS Array";
+		return name;
 	}
 
 	@Override
@@ -61,7 +62,8 @@ public class BFSArrayAlgorithm extends ShortestPathAlgorithm implements ArrayAlg
 		long startTime = System.nanoTime();
 		run(g.buildWikipediaArrayGraph());
 		long endTime = System.nanoTime();
-		return endTime - startTime;
+		timeComplexity = endTime - startTime;
+		return timeComplexity;
 	}
 
 }

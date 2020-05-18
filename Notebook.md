@@ -39,10 +39,16 @@ with the design.
 ### To what extent was the design cohesive? Did it violate Single Responsibility Principle anywhere?
 
 The design was not very cohesive. This was largely due to the fact that the design had the algorithms have the findShortestPath() method. This was bad for
-a couple reasons. The first big reason is that this logic should take into consideration the resuts of several algorithms, and putting the findShortestPath() in
-each algorithm defeats the purpose of actually finding the shortest path. Additionally, it makes the design less cohesive, because now these algorithms are not only doing their algorithm,
+a couple reasons. The first big reason is that this logic should take into consideration the results of several algorithms, and putting the findShortestPath() in
+each algorithm defeats the purpose of actually finding the shortest path. Additionally it makes the design less cohesive because now these algorithm classes are not only doing their algorithm,
 they are also trying to do the findShortestPath() as well.
 
 ### Was there anything that your peer’s design/notebook lacked that would have made life easier for you?
 
+It would have been helpful for the findShortestPath() to not be done in the ShortestPathAlgorithm class, since that needed to have access to all of the actual algorithms.
+Additionally, it would have been nice if the Graph class had both a ListGraph that had a pointer to the starting node so we would be able to pass it into the run() method.
+
 ### In retrospect: was there anything that your notebook was lacking that would have made life easier for someone else?
+
+I probably should have included the objects that represented the array and the list versions of the Graph objects. This would have made my code easier to understand
+and implement.
