@@ -98,7 +98,11 @@ get more algorithms.
 
 #### Class Diagram
 
+![FinalUpdatedClassDiagram](images/FinalUpdatedClassDiagram.PNG)
+
 #### Sequence Diagram
+
+![FinalUpdatedSequenceDiagram](images/FinalUpdatedSequenceDiagram.PNG)
 
 ### Citations
 
