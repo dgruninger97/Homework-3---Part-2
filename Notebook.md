@@ -65,7 +65,8 @@ For my first candidate design, we could simply make a ShortestPathAdapter class 
 
 #### Pros
 
-This doesn't require any code to be changed and it also allows for the solution to be properly implemented if we call the correct methods.
+This doesn't require any code to be changed and it also allows for the solution to be properly implemented if we call the correct methods. Also, it isn't a lot
+of code that we have to write; it is just one class and won't require any major restructuring of the system.
 
 #### Cons
 
@@ -80,15 +81,24 @@ call the method of interest in the waybetter.ShortestPath class.
 #### Pros
 
 This will result in a more cohesive as classes will not have to go through the ShortestPathAlgorithm class to call waybetter.ShortestPath. Instead, they will
-be able to directly call it.
+be able to directly call it. Additionally, there wont be a reference to the waybetter.ShortestPath inside of the ShortestPathAlgorithm class.
 
 #### Cons
 
-This introduces a lot more coupling into our system as each individual algorithm class will now depend upon the waybetter.ShortestPath class.
+This introduces a lot more coupling into our system as each individual algorithm class will now depend upon the waybetter.ShortestPath class. This is overkill
+and really not necessary.
 
 ### Design Preference
 
+I think it makes more sense to use design 1. Not only will it not require a lot of code or change any existing code, but it will does a better job adapting to
+change than the second candidate design. I also think it is excessive to have a reference to the same class in every algorithm, as that clearly will not scale as we
+get more algorithms.
+
 ### Sketches
+
+#### Class Diagram
+
+#### Sequence Diagram
 
 ### Citations
 
