@@ -112,4 +112,4 @@ https://sourcemaking.com/design_patterns/adapter
 
 https://www.dofactory.com/net/adapter-design-pattern
 
-### Time Spent
+### Time Spent 3 hours
