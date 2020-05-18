@@ -1,5 +1,7 @@
 # Homework 3 - Part 2
 
+# Task 2 Peer Review
+
 ## Date: 5/16/2020
 
 ## Final Class Diagram
@@ -52,3 +54,48 @@ Additionally, it would have been nice if the Graph class had both a ListGraph th
 
 I probably should have included the objects that represented the array and the list versions of the Graph objects. This would have made my code easier to understand
 and implement.
+
+# Task 3 Adapt a New Shortest Path Algorithm
+
+## Date: 5/17/2020
+
+### Candidate Design 1
+
+For my first candidate design, we could simply make a ShortestPathAdapter class that would make calls to the methods of interest in the waybetter.ShortestPath class.
+
+#### Pros
+
+This doesn't require any code to be changed and it also allows for the solution to be properly implemented if we call the correct methods.
+
+#### Cons
+
+This design isn't as good if we end up adding functionality to the 3rd party algorithm. We will have to change our adapter class in order to implement the correct
+functions.
+
+### Candidate Design 2
+
+For the second candidate design, I propose that we give every algorithm a reference to the waybetter.ShortestPath class. That will allow them to all directly
+call the method of interest in the waybetter.ShortestPath class.
+
+#### Pros
+
+This will result in a more cohesive as classes will not have to go through the ShortestPathAlgorithm class to call waybetter.ShortestPath. Instead, they will
+be able to directly call it.
+
+#### Cons
+
+This introduces a lot more coupling into our system as each individual algorithm class will now depend upon the waybetter.ShortestPath class.
+
+### Design Preference
+
+### Sketches
+
+### Citations
+
+https://sourcemaking.com/design_patterns/adapter
+
+https://sourcemaking.com/design_patterns/adapter
+
+https://www.dofactory.com/net/adapter-design-pattern
+
+### Time Spent
